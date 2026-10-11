@@ -41,7 +41,6 @@ If the key is missing or the backend is down, the visitor stays on the form and 
 
 ## Before going live
 
-- [ ] Fill the contact `TODO`s in `src/lib/site.ts`: phone, email, address.
 - [ ] Set the env vars above (website host + backend `.env`), and deploy the backend change.
 - [ ] Point `larishahealthcare.com` DNS at the host and submit `/sitemap.xml` in Google Search Console.
 

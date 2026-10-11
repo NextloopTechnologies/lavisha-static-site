@@ -1,5 +1,4 @@
 // Single source of truth for business details used across pages, metadata and JSON-LD.
-// TODO: replace every value marked TODO with the real details before going live.
 
 export const site = {
   name: "Larisha Health Care",
@@ -8,18 +7,17 @@ export const site = {
     "End-to-end cashless insurance claim processing for hospitals — pre-authorization, TPA queries, enhancements, discharge and settlement, handled by specialists and tracked in one portal.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://larishahealthcare.com").replace(/\/$/, ""),
   locale: "en_IN",
-  // TODO: real contact details
-  phone: "+91-00000-00000",
-  phoneDisplay: "+91 00000 00000",
-  email: "hello@example.com",
+  phone: "+91-9021553809",
+  phoneDisplay: "+91 90215 53809",
+  email: "support@laraisha.com",
   address: {
-    street: "TODO street address",
-    locality: "TODO city",
-    region: "TODO state",
-    postalCode: "000000",
+    street: "Flat No. B-1206, Survey No. 282, Gini Bellina, Porwal Road, Lohogaon",
+    locality: "Pune",
+    region: "Maharashtra",
+    postalCode: "411047",
     country: "IN",
   },
-  hours: "Mon–Sat, 9:00 AM – 8:00 PM IST",
+  hours: "Mon–Sat, 9 AM – 8 PM IST",
   portalUrl: "https://app.larishahealthcare.com/login",
   tpaCount: "20+",
   claimsProcessed: "1,000+",
