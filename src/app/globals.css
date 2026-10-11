@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #1c1a16;
+  --color-ink-soft: #4a463e;
+  --color-muted: #6b665c;
+  --color-paper: #fbf8f1;
+  --color-paper-deep: #f3ecdc;
+  --color-line: #e6dcc6;
+  --color-gold: #e0ae2e;
+  --color-gold-light: #f2c94c;
+  --color-gold-deep: #8a6410;
+  --color-sage: #2f6b4f;
+  --color-rust: #a4442b;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold-deep);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: var(--color-gold-light);
+    color: var(--color-ink);
+  }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+@utility eyebrow {
+  @apply text-xs font-bold uppercase tracking-[0.18em] text-gold-deep;
+}
+@utility btn {
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold transition-colors;
+}
+@utility btn-primary {
+  @apply btn bg-ink text-paper hover:bg-ink-soft;
+}
+@utility btn-gold {
+  @apply btn bg-gold text-ink hover:bg-gold-light;
+}
+@utility btn-ghost {
+  @apply btn border border-ink/20 text-ink hover:border-ink hover:bg-white;
+}
+@utility card {
+  @apply rounded-2xl border border-line bg-white p-6 sm:p-7;
+}
+.prose-body p {
+  @apply mb-4 leading-relaxed text-ink-soft;
+}
+@utility gold-rule {
+  background: linear-gradient(90deg, #c8961a, #f2c94c);
+}
